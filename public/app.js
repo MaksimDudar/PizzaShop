@@ -6,3 +6,8 @@ function something()
   window.localStorage.setItem('bbb', x);
   alert(x);
 }
+
+function add_to_cart()
+{
+  alert('hello from function')
+}
