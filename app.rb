@@ -21,6 +21,16 @@ get '/about' do
 	erb :about
 end
 
+post '/place_order' do
+	  @shipment = Shipment.new params[:order]
+		if @shipment.save
+    erb :order_placed
+	else
+    @error = @shipment.errors.full_messages.first
+    erb "Error"
+	end
+end
+
 post '/cart' do
 @orders_input = params[:orderstring]
 @items = parse_orders_input @orders_input
