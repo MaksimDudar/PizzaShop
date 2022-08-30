@@ -8,6 +8,8 @@ set :database, {adapter: "sqlite3", database: "pizzashop.db"}
 
 class Product < ActiveRecord::Base
 end
+class Shipment < ActiveRecord::Base
+end
 
 
 get '/' do
